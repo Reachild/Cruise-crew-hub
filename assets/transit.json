@@ -1,0 +1,126 @@
+{
+  "updated": "2026-11-25",
+  "transits": [
+    {"name": "上海 · 吴淞口", "en": "Shanghai Wusongkou", "area": "亚洲", "pts": [
+      {"t": "浦东国际机场 PVG", "en": "Arrive at Pudong Airport", "lat": 31.1443, "lon": 121.8083,
+       "tip": "持护照与船司合同入境；到达后先兑换少量人民币，购买电话卡或开通漫游。",
+       "tipEn": "Enter with passport + contract; get some RMB and a local SIM or roaming."},
+      {"t": "宝山区住宿 · 提前 1 晚", "en": "Stay overnight in Baoshan (Day 0)", "lat": 31.4048, "lon": 121.4895,
+       "tip": "强烈建议提前一天抵沪，住吴淞口/宝杨路附近经济型酒店（¥200–350），避免当天跨城赶路误点。",
+       "tipEn": "Arrive a day early and stay near Baoyang Rd (¥200–350) to avoid missing check-in."},
+      {"t": "吴淞口国际邮轮港 · 船员通道", "en": "Wusongkou Terminal · Crew gate", "lat": 31.4112, "lon": 121.5106,
+       "tip": "报到日上午抵达，出示报到函（Joining Letter）与证件走 Crew 通道；大件行李安检后直送船舱。地铁 3 号线宝杨路站下转短驳车，或打车直达（浦东机场全程约 1–1.5h，¥150–200）。",
+       "tipEn": "Show your Joining Letter at the crew gate; Metro L3 to Baoyang Rd, or taxi (1–1.5h from PVG)."}
+    ]},
+    {"name": "天津 · 国际邮轮母港", "en": "Tianjin Intl Cruise Port", "area": "亚洲", "pts": [
+      {"t": "天津滨海国际机场 TSN", "en": "Tianjin Binhai Airport", "lat": 39.1244, "lon": 117.3462,
+       "tip": "天津进出航班多，价格低于北京；落地后先确认第二天报到时间与码头集合地点。",
+       "tipEn": "Tianjin flights are often cheaper than Beijing; confirm check-in time for next morning."},
+      {"t": "市区/塘沽住宿 · 提前 1 晚", "en": "Stay in Tanggu (Day 0)", "lat": 39.0227, "lon": 117.6559,
+       "tip": "住塘沽/滨海新区最近（¥180–320），市区住也可但车程多 40 分钟。天津站有京津城际可达。",
+       "tipEn": "Stay in Tanggu/Binhai (¥180–320); from Tianjin downtown add 40 min drive."},
+      {"t": "天津国际邮轮母港", "en": "Tianjin Cruise Home Port", "lat": 38.9825, "lon": 117.79,
+       "tip": "北京/华北出发主力港（皇家、MSC 华北航线）；打车塘沽→码头约 25 分钟；提前一天也可从北京南站高铁至滨海站转车。",
+       "tipEn": "Main port for Royal/MSC North-China sailings; taxi 25 min from Tanggu, or high-speed rail via Binhai."}
+    ]},
+    {"name": "深圳 · 蛇口", "en": "Shenzhen Shekou", "area": "亚洲", "pts": [
+      {"t": "深圳宝安国际机场 SZX", "en": "Shenzhen Bao'an Airport", "lat": 22.6393, "lon": 113.8108,
+       "tip": "华南出发首选机场；港澳籍或经香港入境者可走蛇口港客运快线衔接。",
+       "tipEn": "Gateway for South China departures; HK arrivals can connect via Shekou ferry."},
+      {"t": "蛇口/海上世界住宿 · 提前 1 晚", "en": "Stay near Sea World (Day 0)", "lat": 22.4839, "lon": 113.9163,
+       "tip": "海上世界商圈酒店 ¥300–500，步行可达邮轮母港；晚间可逛海上世界广场调整状态。",
+       "tipEn": "Sea World area hotels ¥300–500, walking distance to the cruise terminal."},
+      {"t": "蛇口邮轮母港", "en": "Shekou Cruise Home Port", "lat": 22.483, "lon": 113.921,
+       "tip": "爱达、招商维京等华南航线母港；地铁 2 号线蛇口港站步行 10 分钟；机场打车约 30–40 分钟（¥70–100）。",
+       "tipEn": "Home port for Adora & Viking Sun China routes; Metro L2 Shekou Port + 10 min walk."}
+    ]},
+    {"name": "青岛 · 邮轮母港", "en": "Qingdao Cruise Home Port", "area": "亚洲", "pts": [
+      {"t": "青岛胶东国际机场 TAO", "en": "Qingdao Jiaodong Airport", "lat": 36.3611, "lon": 120.3745,
+       "tip": "胶东机场距市区约 1 小时（地铁 8 号线/打车 ¥120–160）；落地先备少量现金。",
+       "tipEn": "Airport is 1h from downtown (Metro L8 or taxi ¥120–160)."},
+      {"t": "老城区/邮轮母港周边住宿", "en": "Stay near the terminal (Day 0)", "lat": 36.0671, "lon": 120.3826,
+       "tip": "住市南区/老城区（¥200–350），顺路栈桥、劈柴院；次日 15–20 分钟车程到码头。",
+       "tipEn": "Stay in Shinan/Old Town (¥200–350); 15–20 min drive to the terminal next day."},
+      {"t": "青岛国际邮轮母港", "en": "Qingdao Cruise Terminal", "lat": 36.093, "lon": 120.318,
+       "tip": "爱达地中海号等华北-日韩航线常用；报到日上午走 Crew 通道，行李托运后可短暂游览滨海步道。",
+       "tipEn": "Used by Adora & Korea/Japan routes; crew gate with early luggage drop-off."}
+    ]},
+    {"name": "东京 · 横滨", "en": "Yokohama Osanbashi", "area": "亚洲", "pts": [
+      {"t": "羽田/成田国际机场", "en": "Haneda (HND) or Narita (NRT)", "lat": 35.5494, "lon": 139.7798,
+       "tip": "优先羽田（离横滨 30 分钟）；成田到横滨约 1.5–2 小时（N'EX/机场巴士 ¥150–250）。",
+       "tipEn": "Prefer Haneda (30 min to Yokohama); Narita adds 1.5–2h (N'EX ¥150–250)."},
+      {"t": "横滨站/中华街周边住宿 · 提前 1 晚", "en": "Stay in Yokohama (Day 0)", "lat": 35.4658, "lon": 139.6223,
+       "tip": "横滨站周边酒店 ¥400–700，去大栈桥地铁 10 分钟；倒时差可夜游港未来 21 区。",
+       "tipEn": "Yokohama hotels ¥400–700; 10 min by train to Osanbashi pier."},
+      {"t": "横滨大栈桥国际客船码头", "en": "Osanbashi Pier", "lat": 35.453, "lon": 139.646,
+       "tip": "公主、荷美等日韩航线国际段母港；报到走国际客船通道，需出示护照、合同与报到函；步行从港未来站 10 分钟。",
+       "tipEn": "International crew gate; bring passport, contract & joining letter; 10 min walk from Minatomirai."}
+    ]},
+    {"name": "迈阿密", "en": "PortMiami", "area": "美洲", "pts": [
+      {"t": "迈阿密国际机场 MIA", "en": "Miami Intl Airport · C1-D entry", "lat": 25.7959, "lon": -80.287,
+       "tip": "持 C1-D 船员签证入境；海关问询准备好合同与报到函，回答简洁诚实。出境厅内有免费 Wi-Fi 与船司接驳咨询台。",
+       "tipEn": "Enter on a C1-D crew visa; keep contract & joining letter ready for immigration."},
+      {"t": "机场/市中心酒店 · 提前 1 晚", "en": "Airport hotel (Day 0)", "lat": 25.7743, "lon": -80.1937,
+       "tip": "建议住机场圈酒店（$80–140），倒时差并调整状态；Miami 安全面较大，夜间避免独行。",
+       "tipEn": "Stay near MIA ($80–140) to rest; avoid walking alone at night."},
+      {"t": "PortMiami 码头 · Crew Processing", "en": "PortMiami crew terminal", "lat": 25.7746, "lon": -80.1633,
+       "tip": "出租车/Uber 约 15–25 分钟；先到 Crew Processing 点办理船员手续与 I-95 登陆流程，通常有船司接驳班车（看报到函说明），办完统一送船。",
+       "tipEn": "Taxi/Uber 15–25 min; clear crew processing first, shuttle to ship per instructions."}
+    ]},
+    {"name": "罗德岱堡", "en": "Port Everglades", "area": "美洲", "pts": [
+      {"t": "劳德代尔堡国际机场 FLL", "en": "Fort Lauderdale-Hollywood Intl", "lat": 26.0742, "lon": -80.1506,
+       "tip": "嘉年华、荷美、公主南加勒比航线常用港；C1-D 入关流程与迈阿密一致但人流更少、速度更快。",
+       "tipEn": "Common for Carnival/HAL/Princess; same C1-D process as Miami but faster lines."},
+      {"t": "FLL 机场圈住宿 · 提前 1 晚", "en": "Airport hotel (Day 0)", "lat": 26.1224, "lon": -80.1373,
+       "tip": "机场酒店 $70–120，比迈阿密便宜；沿海有沙滩可散步休整。",
+       "tipEn": "Airport hotels $70–120, cheaper than Miami; beach walk nearby."},
+      {"t": "Port Everglades · 船员通道", "en": "Port Everglades crew gate", "lat": 26.0936, "lon": -80.1157,
+       "tip": "机场→码头仅 10–20 分钟（$15–25）；报到大厅分船司柜台，行前确认在哪个 Terminal（17–26 号泊位跨度大）。",
+       "tipEn": "Airport→port 10–20 min ($15–25); confirm your specific terminal number first."}
+    ]},
+    {"name": "温哥华", "en": "Canada Place", "area": "美洲", "pts": [
+      {"t": "温哥华国际机场 YVR", "en": "Vancouver Intl Airport", "lat": 49.1967, "lon": -123.1815,
+       "tip": "持加拿大临时居民签证（TRV）/ eTA 按航司要求；入境后取加拿大电话卡或开通漫游；阿拉斯加航线船员多在此登船。",
+       "tipEn": "TRV/eTA per airline rules; get a local SIM — gateway for Alaska itineraries."},
+      {"t": "市中心住宿 · 提前 1 晚", "en": "Downtown stay (Day 0)", "lat": 49.2827, "lon": -123.1207,
+       "tip": "Canada Line 直达市中心（$4–9）；酒店 CA$130–220，傍晚可走斯坦利公园海堤倒时差。",
+       "tipEn": "Canada Line downtown ($4–9); hotels CA$130–220; seawall walk to adjust."},
+      {"t": "Canada Place 五帆码头", "en": "Canada Place cruise terminal", "lat": 49.2888, "lon": -123.1111,
+       "tip": "码头位于市中心会展中心内，步行即达；报到出示护照、签证与报到函，行李先托运再排队办船员手续。",
+       "tipEn": "Terminal is downtown inside the convention centre; drop bags, then crew check-in."}
+    ]},
+    {"name": "巴塞罗那", "en": "Barcelona Cruise Port", "area": "欧洲", "pts": [
+      {"t": "巴塞罗那埃尔普拉特机场 BCN", "en": "Barcelona El Prat (BCN)", "lat": 41.2974, "lon": 2.0833,
+       "tip": "申根签证按首入境港准备材料；机场 T1/T2 有 Aerobus（€7）进城约 35 分钟。",
+       "tipEn": "Schengen visa per first port of entry; Aerobus €7 into town, 35 min."},
+      {"t": "哥特区/扩展区住宿 · 提前 1 晚", "en": "Stay central (Day 0)", "lat": 41.3874, "lon": 2.1686,
+       "tip": "市中心酒店 €70–140；注意扒手（兰布拉大道与地铁），背包前背。",
+       "tipEn": "Central hotels €70–140; beware pickpockets on La Rambla & metro."},
+      {"t": "巴塞罗那邮轮码头", "en": "Cruise terminal (Moll Adossat)", "lat": 41.352, "lon": 2.18,
+       "tip": "MSC/皇家/歌诗达地中海线主力母港；码头距市中心 15–20 分钟，有摆渡巴士（Blue Bus €3）连接各航站楼与哥伦布大道。",
+       "tipEn": "Main Med hub for MSC/RCCL/Costa; Blue Bus €3 links terminals to Columbus Ave."}
+    ]},
+    {"name": "罗马 · 奇维塔韦基亚", "en": "Civitavecchia (Rome)", "area": "欧洲", "pts": [
+      {"t": "罗马菲乌米奇诺机场 FCO", "en": "Rome Fiumicino (FCO)", "lat": 41.8003, "lon": 12.2389,
+       "tip": "申根入境后搭机场大巴/火车到奇维塔韦基亚（机场→港口城 45–70 分钟 €8–15）。",
+       "tipEn": "After Schengen entry, bus/train to Civitavecchia (45–70 min, €8–15)."},
+      {"t": "奇维塔韦基亚老城住宿 · 提前 1 晚", "en": "Stay in Civitavecchia (Day 0)", "lat": 42.0939, "lon": 11.7966,
+       "tip": "港口城酒店 €60–110，步行可达码头；老城傍晚散步看米开朗基罗堡垒。",
+       "tipEn": "Port-town hotels €60–110, walkable to terminal; evening walk by the Michelangelo fort."},
+      {"t": "奇维塔韦基亚邮轮码头", "en": "Civitavecchia cruise terminal", "lat": 42.0923, "lon": 11.7809,
+       "tip": "地中海西部最大母港；船员走 Largo Occhialini 门报到，行李托运点在码头入口，报到函与证件随身。",
+       "tipEn": "Largest west-Med home port; crew gate at Largo Occhialini, keep documents handy."}
+    ]},
+    {"name": "悉尼", "en": "Sydney Circular Quay", "area": "大洋洲", "pts": [
+      {"t": "悉尼金斯福德机场 SYD", "en": "Sydney Kingsford Smith (SYD)", "lat": -33.9399, "lon": 151.1753,
+       "tip": "澳州过境/工作签证按合同确认；机场→市区 Airport Line AU$20，约 20 分钟。",
+       "tipEn": "Visa per contract; Airport Link to city AU$20, 20 min."},
+      {"t": "市中心/岩石区住宿 · 提前 1 晚", "en": "Stay at The Rocks (Day 0)", "lat": -33.8688, "lon": 151.2093,
+       "tip": "岩石区/市中心酒店 AU$130–250；傍晚环形码头看歌剧院夜景，倒时差首选。",
+       "tipEn": "The Rocks hotels AU$130–250; evening at Circular Quay for the Opera House view."},
+      {"t": "环形码头 · 海外客运码头", "en": "Overseas Passenger Terminal", "lat": -33.8607, "lon": 151.2103,
+       "tip": "公主、P&O、名人南太平洋线母港；码头位于环形码头站旁 5 分钟步行，报到出示护照、签证与报到函。",
+       "tipEn": "Home port for Princess/P&O/Equinox routes; 5 min from Circular Quay station."}
+    ]}
+  ]
+}

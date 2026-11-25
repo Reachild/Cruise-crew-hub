@@ -1,0 +1,14 @@
+﻿类别 Category,检查项 Item,中文说明,English Note,状态 Status
+证件 Documents,护照 Passport,有效期 ≥ 合同期后 6 个月，且有 2 页空白,"Valid 6+ months beyond contract, 2 blank pages",☐
+证件 Documents,海员证 Seaman Book,由船司或代理协助办理,Arranged by cruise line or agent,☐
+证件 Documents,STCW 基本安全培训证书,四小证：基本安全、救生艇筏、消防、急救,"STCW Basic Safety: PSSR, FPFF, EFA, PSCRB",☐
+证件 Documents,健康证 / 海事体检,含胸片、乙肝、HIV、黄热病疫苗（视航线）,"Medical exam incl. chest X-ray, vaccines per itinerary",☐
+证件 Documents,无犯罪记录证明,部分船司要求公证,"Police clearance, notarized if required",☐
+行程 Travel,机票与登船凭证,确认登船城市、码头、时间,"Confirm embarkation port, terminal and time",☐
+行李 Luggage,制服与工作鞋,黑色防滑工作鞋、深色袜子,"Black non-slip work shoes, dark socks",☐
+行李 Luggage,个人药品,带足合同期用量 + 英文处方,Full contract supply + English prescription,☐
+行李 Luggage,转换插头,船上多为美标/欧标插座,US/EU adapters (varies by ship),☐
+财务 Finance,首月生活费,建议 USD 300–500 现金应急,USD 300–500 cash for the first weeks,☐
+财务 Finance,银行卡,Visa/Mastercard，用于船员账户充值,Visa/Mastercard for crew account top-up,☐
+联系 Contacts,紧急联络人信息,家人姓名、电话、地址（英文）,Emergency contact in English,☐
+联系 Contacts,船司 HR 联系方式,保存招募官与代理电话,Recruiter and agent contacts saved,☐

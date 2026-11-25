@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智能助理 · Hub · 邮轮新人学习平台</title>
+  <meta name="description" content="Hub 智能助理：基于全站 500+ 条邮轮知识的问答助手，支持本地检索与大模型 API 双模式。">
+  <link rel="manifest" href="assets/manifest.webmanifest">
+  <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("hub_theme")||"dark")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
+  <link rel="stylesheet" href="assets/style.css?v=20261125e">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">⚓ Hub<small>邮轮新人学习平台</small></a>
+      <nav class="main-nav">
+        <a href="index.html">首页</a>
+        <a href="cruise-lines.html">船司百科</a>
+        <a href="recruitment.html">招聘渠道</a>
+        <a href="departments.html">部门图谱</a>
+        <a href="jobs.html">岗位专区</a>
+        <a href="templates.html">求职模板</a>
+        <a href="safety.html">安全指南</a>
+        <a href="scripts.html">话术库</a>
+        <a href="knowledge.html">知识库</a>
+        <a href="skills.html">技能体系</a>
+        <a href="promotion.html">晋升通道</a>
+        <a href="quiz.html">自测题库</a>
+        <a href="pitfall.html">避坑专区</a>
+        <a href="templates-download.html">模板下载</a>
+        <a href="tools.html">工具箱</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <p class="crumb"><a href="index.html">首页</a> / 智能助理</p>
+
+    <section class="hero">
+      <h1>智能助理 <span class="en">AI Assistant</span></h1>
+      <p>我已经读完全站 500+ 条内容——知识库术语、13 部门技能 SOP、避坑经验、招聘渠道、双语话术。直接用大白话问，我给你答案并标出出处。</p>
+      <div class="mt16">
+        <span class="chip gold">500+ 知识条目</span><span class="chip">本地检索 · 零成本</span><span class="chip">可接入大模型</span>
+      </div>
+    </section>
+
+    <div class="ai-page-wrap">
+      <div id="ai-page">
+        <div class="ai-head"><span>🤖 Hub 智能助理</span><span id="aip-badge" style="font-size:12px;color:var(--text-dim);font-weight:400"></span></div>
+        <div id="aip-msgs"></div>
+        <div class="ai-input"><input id="aip-q" placeholder="输入你的问题，例如：客房铺床的标准是什么" autocomplete="off"><button id="aip-send">发送</button></div>
+      </div>
+
+      <div class="ai-sug-grid">
+        <button class="ai-sug">济州天气</button>
+        <button class="ai-sug">南极航线有哪些</button>
+        <button class="ai-sug">客房铺床的标准是什么</button>
+        <button class="ai-sug">餐厅服务生多久能升领班</button>
+        <button class="ai-sug">STCW 四小证包含什么</button>
+        <button class="ai-sug">面试怎么回答「为什么想上邮轮」</button>
+        <button class="ai-sug">厨房危险温度带是多少</button>
+        <button class="ai-sug">新手中介怎么防坑</button>
+        <button class="ai-sug">酒吧 Upsell 话术</button>
+        <button class="ai-sug">哪家船司适合英语不好的人</button>
+      </div>
+
+      <details class="ai-cfg">
+        <summary>⚙️ 高级设置：接入大模型 API（可选）</summary>
+        <p class="muted" style="font-size:13px;margin-top:10px;">默认使用<strong>本地检索模式</strong>：不联网、零费用、响应即时，答案来自平台已有内容。若填入 API 配置，助理会先用平台资料做检索增强，再交给大模型组织语言，可回答更开放的问题（如「我英语不好能做什么岗位」）。配置只保存在你本机浏览器，不会上传。</p>
+        <div class="ai-share">
+          <strong>📲 分享给朋友：两分钟开启 AI 模式</strong>
+          <p>打开本页（<strong>智能助理</strong>完整版），展开这个面板，按下面三步填好保存即可。每个人的 Key 存在自己浏览器里，互不相通、互不收费。</p>
+          <ol>
+            <li><strong>选一家平台注册并拿到 Key</strong>（任选其一）：
+              <ul>
+                <li>DeepSeek：开放平台 <code>platform.deepseek.com</code>，Model 填 <code>deepseek-chat</code>，价格最低（几元额度可用很久）</li>
+                <li>OpenAI：Model 填 <code>gpt-4o-mini</code></li>
+                <li>智谱 / Kimi / 通义等：只要文档标注「OpenAI 兼容」，换掉 Endpoint 即可</li>
+              </ul>
+            </li>
+            <li><strong>填三项</strong>：Endpoint（完整 API 地址）＋ API Key（sk-…）＋ 模型名，点「保存并启用」</li>
+            <li><strong>看到左下角变成「⚡ AI 模式」即成功</strong>；调用失败会自动回退本地检索，不会卡死</li>
+          </ol>
+          <p class="muted" style="font-size:12.5px;">常用 Endpoint 对照：DeepSeek <code>https://api.deepseek.com/v1/chat/completions</code> · OpenAI <code>https://api.openai.com/v1/chat/completions</code>。想退回免费模式，点「清除配置」即可。</p>
+        </div>
+        <div class="ai-cfg-grid">
+          <div><label>API Endpoint（如 https://api.openai.com/v1/chat/completions）</label><input id="cfg-endpoint" placeholder="https://api.openai.com/v1/chat/completions"></div>
+          <div><label>API Key</label><input id="cfg-key" type="password" placeholder="sk-..."></div>
+          <div><label>模型名 Model</label><input id="cfg-model" placeholder="gpt-4o-mini"></div>
+        </div>
+        <div class="ai-cfg-actions">
+          <button class="primary" id="cfg-save">保存并启用</button>
+          <button id="cfg-clear">清除配置（回到本地模式）</button>
+        </div>
+      </details>
+
+      <p class="notice">助理回答基于平台内容自动检索生成，可能存在偏差；涉及证件、合同、薪资等关键决策，请以船司官方与海事主管机关最新要求为准。</p>
+    </div>
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>⚓ Hub · 邮轮新人一站式学习平台</p>
+      <p class="muted">内容为通用行业参考，具体以各船司与海事主管机关最新要求为准。</p>
+    </div>
+  </footer>
+
+  <script src="assets/assistant.js?v=20261125e"></script>
+  <script src="assets/app.js?v=20261125e"></script>
+  <script>(function(){var f=localStorage.getItem("hub_ai_config_v1");if(!f)return;try{var c=JSON.parse(f);if(c.endpoint)document.getElementById("cfg-endpoint").value=c.endpoint;if(c.model)document.getElementById("cfg-model").value=c.model;if(c.key)document.getElementById("cfg-key").value=c.key}catch(e){}document.getElementById("cfg-save").onclick=function(){var o={endpoint:document.getElementById("cfg-endpoint").value.trim(),key:document.getElementById("cfg-key").value.trim(),model:document.getElementById("cfg-model").value.trim()};localStorage.setItem("hub_ai_config_v1",JSON.stringify(o));location.reload()};document.getElementById("cfg-clear").onclick=function(){localStorage.removeItem("hub_ai_config_v1");location.reload()};})();</script>
+</body>
+</html>

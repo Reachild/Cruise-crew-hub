@@ -1,0 +1,13 @@
+﻿交接项 Item,中文记录 CN,English Record,备注 Remarks
+班次 Shift,晚班 16:00–24:00,Evening 16:00–24:00,写明起止时间
+交班人 Handed over by,,,签字 Sign
+接班人 Received by,,,签字 Sign
+在岗人数 Staff on Duty,服务生 6 人 / 助理 4 人,6 waiters / 4 assistants,缺岗需注明原因
+待跟进事项 Pending Items,12 号桌客人要求明晚 19:00 靠窗位,Table 12 requested window seat tomorrow 19:00,按「位置 + 需求 + 时限」写
+客人特殊需求 Special Requests,8021 房客人海鲜过敏,Cabin 8021 guest allergic to seafood,过敏信息必须逐项交接
+设备异常 Equipment Issues,3 号咖啡机蒸汽不足，已报修,"Coffee machine #3 low steam, reported to maintenance",写明报修时间与工单号
+库存预警 Stock Alerts,红酒杯剩余不足 20 只,Wine glasses below 20 pcs,低于安全库存需申报
+安全事项 Safety Notes,甲板湿滑，已放置警示牌,"Deck slippery, warning sign placed",安全永远是第一交接项
+投诉与处理 Complaints,两起上菜慢投诉，已致歉并赠甜品,"2 slow-service complaints, apologized and offered dessert",记录处理结果避免重复
+遗留现金 Cash on Hand,收银抽屉 USD 120（已双签）,USD 120 in drawer (double-signed),现金必须双人核签
+下一班重点 Focus for Next Shift,明晚 18:30 有 40 人宴会,40-pax banquet tomorrow 18:30,提前预告大任务

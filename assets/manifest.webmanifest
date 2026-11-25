@@ -1,0 +1,11 @@
+{
+  "name": "Hub · 邮轮新人一站式学习平台",
+  "short_name": "Hub",
+  "description": "面向邮轮入行新人的中英双语一站式学习平台",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220",
+  "lang": "zh-CN",
+  "icons": []
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b1220">
+<title>航线速查 | Hub · 邮轮新人学习平台</title>
+<meta name="description" content="极地、跨洋、内河与东亚邮轮典型航线速查：船司、船名、运营季节、天数、出发港与官网直达，附地图视图。">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>#routes-map{height:420px;border-radius:12px;border:1px solid var(--line);z-index:0}</style>
+<script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("hub_theme")||"dark")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
+<link rel="stylesheet" href="assets/style.css?v=20261125e">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="logo" href="index.html">⚓ Hub<small>邮轮新人学习平台</small></a>
+    <nav class="main-nav">
+      <a href="index.html">首页</a>
+      <a href="cruise-lines.html">船司百科</a>
+      <a href="recruitment.html">招聘渠道</a>
+      <a href="jobs.html">岗位专区</a>
+      <a href="departments.html">部门图谱</a>
+      <a href="templates.html">求职模板</a>
+      <a href="safety.html">安全指南</a>
+      <a href="scripts.html">话术库</a>
+      <a href="knowledge.html">知识库</a>
+        <a href="skills.html">技能体系</a>
+        <a href="promotion.html">晋升通道</a>
+        <a href="quiz.html">自测题库</a>
+        <a href="pitfall.html">避坑专区</a>
+        <a href="templates-download.html">模板下载</a>
+        <a href="tools.html">工具箱</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="crumb"><a href="index.html">首页</a><span class="sep">/</span>航线速查</div>
+
+  <section class="hero">
+    <h1>航线速查<span class="en">Route Finder</span></h1>
+    <p>34 条典型航线参考：极地、跨洋大船、内河河轮与日本及东亚，按区域筛选或直接搜船名 / 出发港，一步直达船司官网。求职者可用它定位目标船司，面试前先搞清楚「这家公司的船跑哪里」。</p>
+    <div class="mt16">
+      <span class="chip gold">结构化数据</span>
+      <span class="chip">离线可用 · 秒开</span>
+      <span class="chip green">官网直达链接</span>
+    </div>
+  </section>
+
+  <div class="notice">
+    ℹ️ <strong>使用说明</strong>：以下为<strong>典型航线参考</strong>（区域、季节、天数、出发港均为行业常规安排），班期每年调整，实际以船司官网为准。想问「我 3 月有 10 天假适合哪条南极航线」这类组合问题，直接在<strong>智能助理</strong>里输入即可。
+  </div>
+
+  <div class="mt16" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+    <div class="quiz-cats" id="routes-cats" style="margin:0"></div>
+    <input id="routes-search" placeholder="搜船名 / 船司 / 区域 / 出发港…" style="flex:1;min-width:220px;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--bg-soft);color:var(--text)">
+  </div>
+  <p class="muted mt8" id="routes-stat" style="font-size:13px"></p>
+
+  <h2 class="section-title mt24">地图视图 <span class="en">Map View</span></h2>
+  <div id="routes-map"></div>
+  <p class="muted mt8" style="font-size:12px">※ 地图标记为<strong>出发港</strong>位置，弧线为<strong>典型航线示意</strong>（非实时船位）；想看实时船位可查 <a href="https://www.cruisemapper.com/" target="_blank" rel="noopener">Cruisemapper</a>。离线或 CDN 不可达时地图自动隐藏，不影响列表使用。</p>
+
+  <h2 class="section-title mt24">航线列表 <span class="en">All Routes</span></h2>
+  <div id="routes-list"><p class="tool-empty">航线加载中…</p></div>
+
+  <h2 class="section-title">相关内容 <span class="en">Related</span></h2>
+  <div class="grid cols-3">
+    <a class="card" href="recruitment.html"><span class="emoji">📋</span><h3>招聘渠道<span class="en">Recruitment</span></h3><p>23 家船司官方入口与正规外派机构核验。</p></a>
+    <a class="card" href="polar.html"><span class="emoji">🧊</span><h3>极地面试攻略<span class="en">Polar Guide</span></h3><p>极地岗位面试全攻略：口语、证书与获取渠道。</p></a>
+    <a class="card" href="cruise-lines.html"><span class="emoji">🚢</span><h3>船司百科<span class="en">Line Encyclopedia</span></h3><p>船司文化、船队与用人要求双语对照。</p></a>
+    <a class="card" href="assistant.html"><span class="emoji">🤖</span><h3>智能助理<span class="en">AI Assistant</span></h3><p>组合查询（如「3 月 10 天适合哪条南极航线」）交给它。</p></a>
+    <a class="card" href="quiz.html"><span class="emoji">🧠</span><h3>自测题库<span class="en">Quiz</span></h3><p>68 道双语题，含极地专项。</p></a>
+    <a class="card" href="templates-download.html"><span class="emoji">📥</span><h3>模板下载<span class="en">Templates</span></h3><p>双语简历与面试准备表。</p></a>
+  </div>
+
+  <div class="notice mt24">
+    ⚠️ 班期、天数与出发港以各船司官网最新公告为准；本页数据为季度人工核验的参考信息。<span class="en" style="display:block;color:var(--text-dim);font-family:var(--en-font);font-size:12.5px;margin-top:4px;">Itineraries change every season — always confirm on the cruise line's official website.</span>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>⚓ Hub · 邮轮新人一站式学习平台 © <span data-year>2026</span> · 持续更新中</p>
+    <p class="muted">内容为通用行业参考，具体以各船司与海事主管机关最新要求为准。</p>
+  </div>
+</footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/routes.js?v=20261125e"></script>
+  <script src="assets/assistant.js?v=20261125e"></script>
+  <script src="assets/app.js?v=20261125e"></script>
+</body>
+</html>

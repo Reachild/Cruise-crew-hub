@@ -1,0 +1,419 @@
+{
+"updated":"2026-11-25",
+"airlines":[
+{
+"code":"CA",
+"cn":"中国国际航空",
+"en":"Air China",
+"hub":"PEK"
+},
+{
+"code":"MU",
+"cn":"中国东方航空",
+"en":"China Eastern",
+"hub":"PVG"
+},
+{
+"code":"CZ",
+"cn":"中国南方航空",
+"en":"China Southern",
+"hub":"CAN"
+},
+{
+"code":"HU",
+"cn":"海南航空",
+"en":"Hainan Airlines",
+"hub":"PEK"
+},
+{
+"code":"MF",
+"cn":"厦门航空",
+"en":"Xiamen Air",
+"hub":"XMN"
+},
+{
+"code":"3U",
+"cn":"四川航空",
+"en":"Sichuan Airlines",
+"hub":"TFU"
+},
+{
+"code":"ZH",
+"cn":"深圳航空",
+"en":"Shenzhen Airlines",
+"hub":"SZX"
+},
+{
+"code":"HO",
+"cn":"吉祥航空",
+"en":"Juneyao Air",
+"hub":"PVG"
+},
+{
+"code":"9C",
+"cn":"春秋航空",
+"en":"Spring Airlines",
+"hub":"PVG"
+},
+{
+"code":"FM",
+"cn":"上海航空",
+"en":"Shanghai Airlines",
+"hub":"PVG"
+},
+{
+"code":"SC",
+"cn":"山东航空",
+"en":"Shandong Airlines",
+"hub":"TAO"
+},
+{
+"code":"GS",
+"cn":"天津航空",
+"en":"Tianjin Airlines",
+"hub":"TSN"
+},
+{
+"code":"KN",
+"cn":"中国联合航空",
+"en":"China United Airlines",
+"hub":"PKX"
+},
+{
+"code":"CX",
+"cn":"国泰航空",
+"en":"Cathay Pacific",
+"hub":"HKG"
+},
+{
+"code":"BR",
+"cn":"长荣航空",
+"en":"EVA Air",
+"hub":"TPE"
+},
+{
+"code":"CI",
+"cn":"中华航空",
+"en":"China Airlines",
+"hub":"TPE"
+},
+{
+"code":"JX",
+"cn":"星宇航空",
+"en":"Starlux Airlines",
+"hub":"TPE"
+},
+{
+"code":"KE",
+"cn":"大韩航空",
+"en":"Korean Air",
+"hub":"ICN"
+},
+{
+"code":"OZ",
+"cn":"韩亚航空",
+"en":"Asiana Airlines",
+"hub":"ICN"
+},
+{
+"code":"7C",
+"cn":"济州航空",
+"en":"Jeju Air",
+"hub":"ICN"
+},
+{
+"code":"NH",
+"cn":"全日空",
+"en":"ANA",
+"hub":"HND"
+},
+{
+"code":"JL",
+"cn":"日本航空",
+"en":"Japan Airlines",
+"hub":"HND"
+},
+{
+"code":"MM",
+"cn":"乐桃航空",
+"en":"Peach Aviation",
+"hub":"KIX"
+},
+{
+"code":"SQ",
+"cn":"新加坡航空",
+"en":"Singapore Airlines",
+"hub":"SIN"
+},
+{
+"code":"TR",
+"cn":"酷航",
+"en":"Scoot",
+"hub":"SIN"
+},
+{
+"code":"MH",
+"cn":"马来西亚航空",
+"en":"Malaysia Airlines",
+"hub":"KUL"
+},
+{
+"code":"TG",
+"cn":"泰国航空",
+"en":"Thai Airways",
+"hub":"BKK"
+},
+{
+"code":"VJ",
+"cn":"越捷航空",
+"en":"VietJet Air",
+"hub":"SGN"
+},
+{
+"code":"VN",
+"cn":"越南航空",
+"en":"Vietnam Airlines",
+"hub":"SGN"
+},
+{
+"code":"PR",
+"cn":"菲律宾航空",
+"en":"Philippine Airlines",
+"hub":"MNL"
+},
+{
+"code":"GA",
+"cn":"印尼鹰航",
+"en":"Garuda Indonesia",
+"hub":"CGK"
+},
+{
+"code":"AK",
+"cn":"亚洲航空",
+"en":"AirAsia",
+"hub":"KUL"
+},
+{
+"code":"AI",
+"cn":"印度航空",
+"en":"Air India",
+"hub":"DEL"
+},
+{
+"code":"6E",
+"cn":"靛蓝航空",
+"en":"IndiGo",
+"hub":"DEL"
+},
+{
+"code":"EK",
+"cn":"阿联酋航空",
+"en":"Emirates",
+"hub":"DXB"
+},
+{
+"code":"EY",
+"cn":"阿提哈德航空",
+"en":"Etihad Airways",
+"hub":"AUH"
+},
+{
+"code":"QR",
+"cn":"卡塔尔航空",
+"en":"Qatar Airways",
+"hub":"DOH"
+},
+{
+"code":"TK",
+"cn":"土耳其航空",
+"en":"Turkish Airlines",
+"hub":"IST"
+},
+{
+"code":"WY",
+"cn":"阿曼航空",
+"en":"Oman Air",
+"hub":"MCT"
+},
+{
+"code":"LH",
+"cn":"汉莎航空",
+"en":"Lufthansa",
+"hub":"FRA"
+},
+{
+"code":"KL",
+"cn":"荷兰皇家航空",
+"en":"KLM",
+"hub":"AMS"
+},
+{
+"code":"AF",
+"cn":"法国航空",
+"en":"Air France",
+"hub":"CDG"
+},
+{
+"code":"BA",
+"cn":"英国航空",
+"en":"British Airways",
+"hub":"LHR"
+},
+{
+"code":"AZ",
+"cn":"意大利航空(ITA)",
+"en":"ITA Airways",
+"hub":"FCO"
+},
+{
+"code":"IB",
+"cn":"西班牙国家航空",
+"en":"Iberia",
+"hub":"MAD"
+},
+{
+"code":"AY",
+"cn":"芬兰航空",
+"en":"Finnair",
+"hub":"HEL"
+},
+{
+"code":"SK",
+"cn":"北欧航空",
+"en":"SAS",
+"hub":"CPH"
+},
+{
+"code":"LX",
+"cn":"瑞士国际航空",
+"en":"SWISS",
+"hub":"ZRH"
+},
+{
+"code":"OS",
+"cn":"奥地利航空",
+"en":"Austrian Airlines",
+"hub":"VIE"
+},
+{
+"code":"VS",
+"cn":"维珍航空",
+"en":"Virgin Atlantic",
+"hub":"LHR"
+},
+{
+"code":"LO",
+"cn":"波兰航空",
+"en":"LOT Polish",
+"hub":"WAW"
+},
+{
+"code":"UA",
+"cn":"美国联合航空",
+"en":"United Airlines",
+"hub":"SFO"
+},
+{
+"code":"AA",
+"cn":"美国航空",
+"en":"American Airlines",
+"hub":"DFW"
+},
+{
+"code":"DL",
+"cn":"达美航空",
+"en":"Delta Air Lines",
+"hub":"ATL"
+},
+{
+"code":"B6",
+"cn":"捷蓝航空",
+"en":"JetBlue",
+"hub":"JFK"
+},
+{
+"code":"AS",
+"cn":"阿拉斯加航空",
+"en":"Alaska Airlines",
+"hub":"SEA"
+},
+{
+"code":"AC",
+"cn":"加拿大航空",
+"en":"Air Canada",
+"hub":"YYZ"
+},
+{
+"code":"WS",
+"cn":"西捷航空",
+"en":"WestJet",
+"hub":"YYC"
+},
+{
+"code":"QF",
+"cn":"澳洲航空",
+"en":"Qantas",
+"hub":"SYD"
+},
+{
+"code":"NZ",
+"cn":"新西兰航空",
+"en":"Air New Zealand",
+"hub":"AKL"
+},
+{
+"code":"VA",
+"cn":"维珍澳洲",
+"en":"Virgin Australia",
+"hub":"BNE"
+},
+{
+"code":"AR",
+"cn":"阿根廷航空",
+"en":"Aerolíneas Argentinas",
+"hub":"EZE"
+},
+{
+"code":"LA",
+"cn":"拉塔姆航空",
+"en":"LATAM",
+"hub":"SCL"
+},
+{
+"code":"AM",
+"cn":"墨西哥国际航空",
+"en":"Aeroméxico",
+"hub":"MEX"
+},
+{
+"code":"ET",
+"cn":"埃塞俄比亚航空",
+"en":"Ethiopian Airlines",
+"hub":"ADD"
+},
+{
+"code":"KQ",
+"cn":"肯尼亚航空",
+"en":"Kenya Airways",
+"hub":"NBO"
+},
+{
+"code":"MS",
+"cn":"埃及航空",
+"en":"EgyptAir",
+"hub":"CAI"
+},
+{
+"code":"SA",
+"cn":"南非航空",
+"en":"South African Airways",
+"hub":"JNB"
+},
+{
+"code":"FI",
+"cn":"冰岛航空",
+"en":"Icelandair",
+"hub":"KEF"
+}
+]
+}

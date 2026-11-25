@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>船员工具箱 · Hub · 邮轮新人学习平台</title>
+  <meta name="description" content="九大全链路船员工具：薪资计算器、证件倒计时、双语话术检索、个人档案、行李打包清单、入职航班中转、上岸规划、港口实时天气与登船简报生成，全部无需 AI。">
+  <link rel="manifest" href="assets/manifest.webmanifest">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("hub_theme")||"dark")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
+<link rel="stylesheet" href="assets/style.css?v=20261125e">
+<style>.transit-map{height:340px;border-radius:12px;border:1px solid var(--line);z-index:0}</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">⚓ Hub<small>邮轮新人学习平台</small></a>
+      <nav class="main-nav">
+        <a href="index.html">首页</a>
+        <a href="cruise-lines.html">船司百科</a>
+        <a href="recruitment.html">招聘渠道</a>
+        <a href="departments.html">部门图谱</a>
+        <a href="jobs.html">岗位专区</a>
+        <a href="templates.html">求职模板</a>
+        <a href="safety.html">安全指南</a>
+        <a href="scripts.html">话术库</a>
+        <a href="knowledge.html">知识库</a>
+        <a href="skills.html">技能体系</a>
+        <a href="promotion.html">晋升通道</a>
+        <a href="quiz.html">自测题库</a>
+        <a href="pitfall.html">避坑专区</a>
+        <a href="templates-download.html">模板下载</a>
+        <a href="tools.html">工具箱</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <p class="crumb"><a href="index.html">首页</a> / 工具箱</p>
+
+    <section class="hero">
+      <h1>船员工具箱 <span class="en">Crew Toolbox</span></h1>
+      <p>九大链路工具：算收入、盯证件、查话术、建档案、理行李、解中转、规划上岸、看天气、出简报——<strong>全部不依赖 AI</strong>，规则驱动 + 开放数据接口，离线也可用。</p>
+      <div class="mt16">
+        <span class="chip gold">零 AI 依赖</span>
+        <span class="chip">数据本机保存</span>
+        <span class="chip green">Open-Meteo 实时天气</span>
+        <span class="chip">移动端适配</span>
+      </div>
+    </section>
+
+    <!-- ① 薪资计算器 -->
+    <h2 class="section-title">① 岗位薪资计算器 <span class="en">Salary Calculator</span></h2>
+    <div class="tool">
+      <div class="tool-row">
+        <label for="sal-position">选择岗位</label>
+        <select id="sal-position"></select>
+      </div>
+      <p class="muted mt8" id="sal-note"></p>
+      <div class="tool-row">
+        <label for="sal-months">合同期（月）</label>
+        <input id="sal-months" type="number" value="6" min="2" max="9" step="0.5">
+        <label for="sal-fx">美元汇率</label>
+        <input id="sal-fx" type="number" value="7.2" min="5" max="9" step="0.01">
+        <button id="sal-calc">计算收入</button>
+      </div>
+      <div class="tool-result" id="sal-result">选择岗位并点击「计算收入」，即可估算月综合收入与整份合同总收入。</div>
+      <p class="muted mt8">※ 依据公开招聘信息整理的区间估算（2026-11 核验）；小费随航线与船司政策波动较大。船上包食宿，可储蓄比例高。</p>
+    </div>
+
+    <!-- ② 证件倒计时 -->
+    <h2 class="section-title">② 证件有效期倒计时 <span class="en">Certificate Countdown</span></h2>
+    <div class="tool">
+      <div class="tool-row">
+        <label for="cert-name">证件名称</label>
+        <input id="cert-name" type="text" placeholder="如：STCW 四小证 / 护照 / 健康证书" maxlength="24">
+        <label for="cert-date">到期日</label>
+        <input id="cert-date" type="date">
+        <button id="cert-add">添加</button>
+      </div>
+      <div id="cert-list"></div>
+      <p class="muted mt8">⚠️ 建议在到期前 180 天启动续办；数据仅保存在本机浏览器，不上传服务器。</p>
+    </div>
+
+    <!-- ③ 话术检索 -->
+    <h2 class="section-title">③ 双语话术检索 <span class="en">Phrase Finder</span></h2>
+    <div class="tool">
+      <div class="tool-row">
+        <label for="phrase-q">关键词</label>
+        <input id="phrase-q" type="search" placeholder="输入中文场景 / 英文关键词 / 标签（如 餐饮、order、muster）" style="max-width:420px;">
+      </div>
+      <div id="phrase-list"></div>
+      <p class="muted mt8">※ 完整 6 大场景话术体系请见 <a href="scripts.html">话术库</a>；此处为快速检索精简版。</p>
+    </div>
+
+    <!-- ④ 我的档案 -->
+    <h2 class="section-title" id="profile">④ 我的档案 <span class="en">My Profile</span></h2>
+    <div class="tool">
+      <p class="muted mt0">直接输入一句自然语言，助理式解析自动建档（<strong>纯规则解析，无需 AI</strong>）：</p>
+      <div class="tool-row">
+        <input id="prof-nl" type="text" placeholder="如：我12月8日登海洋光谱号，职位餐厅服务生" style="flex:1;min-width:240px">
+        <button id="prof-parse">解析并保存</button>
+      </div>
+      <div id="prof-parse-result" class="tool-result" style="display:none"></div>
+      <div class="tool-row mt8">
+        <label for="prof-name">姓名</label>
+        <input id="prof-name" type="text" maxlength="20" placeholder="Name">
+        <label for="prof-port">母港</label>
+        <input id="prof-port" type="text" maxlength="20" placeholder="如 上海">
+      </div>
+      <div class="tool-row">
+        <label for="prof-ship">船只</label>
+        <input id="prof-ship" type="text" maxlength="30" placeholder="如 海洋光谱号 Spectrum of the Seas">
+        <label for="prof-date">登船日期</label>
+        <input id="prof-date" type="date">
+        <label for="prof-pos">职位</label>
+        <input id="prof-pos" type="text" maxlength="20" placeholder="如 餐厅服务生">
+      </div>
+      <div class="tool-row">
+        <button id="prof-save">保存档案</button>
+        <button id="prof-clear" class="ghost">清空档案</button>
+      </div>
+      <div id="prof-view"></div>
+      <p class="muted mt8">※ 档案保存在本机浏览器（localStorage），不上传服务器；换设备需重新填写。刷新页面不会丢失。</p>
+    </div>
+
+    <!-- ⑤ 行李打包清单 -->
+    <h2 class="section-title" id="packing">⑤ 行李打包清单 <span class="en">Packing List</span></h2>
+    <div class="tool">
+      <div id="pack-progress" class="muted"></div>
+      <div id="pack-list"></div>
+      <div class="tool-row">
+        <button id="pack-reset" class="ghost">重置全部勾选</button>
+      </div>
+      <p class="muted mt8">※ 勾选状态自动保存在本机浏览器；清单依据船员通行经验整理，船司行李限额以合同与官网为准（通常软箱 ≤23kg×2 件）。</p>
+    </div>
+
+    <!-- ⑥ 入职航班中转 -->
+    <h2 class="section-title" id="transit">⑥ 入职航班中转 <span class="en">Embarkation Transit</span></h2>
+    <div class="tool">
+      <div class="tool-row" style="margin-top:0">
+        <div class="quiz-cats" id="transit-area-tabs" style="margin:0"></div>
+      </div>
+      <div class="tool-row" style="margin-top:4px">
+        <div class="quiz-cats" id="transit-tabs" style="margin:0"></div>
+      </div>
+      <div class="transit-wrap">
+        <div id="transit-steps"></div>
+        <div id="transit-map" class="transit-map" aria-label="中转线路地图"></div>
+      </div>
+      <p class="muted mt8">※ 地图线路为「机场 → 落脚点 → 码头」示意路径（Esri 卫星底图，可拖动缩放）；具体班车与费用以码头官网与报到函为准。地图加载失败时步骤指引仍完整可用。</p>
+
+      <h3 style="margin-top:22px">✈️ 全球航班规划 <span class="en-sub">Flight Planner</span></h3>
+      <p class="muted">国内 48 个大型机场出发 × 全球 62 个大型机场到达（覆盖船员入职中转与休假返程），大圆弧线可视化 + 中转方案（经停枢纽 / 推荐航司 / 时长估算）。再输入航班号即可识别航司并加入个人行程。</p>
+      <div class="tool-row">
+        <label for="fp-from">出发机场</label>
+        <select id="fp-from"></select>
+        <label for="fp-to">到达机场</label>
+        <select id="fp-to"></select>
+        <button id="fp-go">规划航线</button>
+      </div>
+      <div id="fp-map" class="transit-map" style="height:360px;margin-top:10px"></div>
+      <div id="fp-result" class="tool-result">选择出发 / 到达机场后点击「规划航线」。</div>
+      <div class="tool-row mt8">
+        <label for="fp-flight">航班号</label>
+        <input id="fp-flight" type="text" placeholder="如 MU587 / CA987 / QR899" maxlength="8" style="max-width:200px">
+        <button id="fp-add">识别并加入行程</button>
+      </div>
+      <div id="fp-parse" class="tool-result" style="display:none"></div>
+      <div id="fp-trips" style="margin-top:10px"></div>
+      <p class="muted mt8">※ 航班号识别为本地航司数据库规则解析（69 家主流航司 IATA 代码），展示航司、枢纽与中转建议；实时航班动态需对接第三方 API，暂不支持。行程保存在本机浏览器。</p>
+    </div>
+
+    <!-- ⑦ 上岸规划 · 餐饮 · 交通 -->
+    <h2 class="section-title" id="port-guide">⑦ 上岸规划 · 餐饮 · 交通 <span class="en">Ashore · Food · Transport</span></h2>
+    <div class="tool">
+      <div class="tool-row" style="margin-top:0">
+        <div class="quiz-cats" id="port-area-tabs" style="margin:0"></div>
+      </div>
+      <div class="tool-row">
+        <label for="port-sel">选择港口</label>
+        <select id="port-sel"></select>
+      </div>
+      <div id="port-info"></div>
+    </div>
+
+    <!-- ⑧ 港口天气 -->
+    <h2 class="section-title" id="weather">⑧ 港口天气 <span class="en">Port Weather</span></h2>
+    <div class="tool">
+      <div class="tool-row">
+        <label for="wx-port">港口</label>
+        <select id="wx-port"></select>
+        <button id="wx-fetch">查询实时天气</button>
+      </div>
+      <div id="wx-result" class="tool-result">选择港口后点击「查询实时天气」。数据来自 Open-Meteo 开放接口，<strong>免费无需 API Key</strong>，完全不需要 AI。</div>
+    </div>
+
+    <!-- ⑨ 生成简报 -->
+    <h2 class="section-title" id="briefing">⑨ 生成简报 <span class="en">Briefing Generator</span></h2>
+    <div class="tool">
+      <div class="tool-row">
+        <button id="brief-gen">一键生成我的登船简报</button>
+        <button id="brief-copy" class="ghost" style="display:none">复制简报</button>
+      </div>
+      <div id="brief-result" class="tool-result">汇总你的档案 + 证件预警 + 打包进度 + 指定港口天气，生成一段可直接发给家人或留档的中英双语简报。</div>
+    </div>
+
+    <div class="notice mt16">
+      ⚠️ 工具数据基于公开资料整理，仅供求职参考，以各船司最新招聘政策与官方证件要求为准。收入估算不构成任何承诺。
+      <span class="en" style="display:block;font-family:var(--en-font);font-size:12px;margin-top:4px;">Tools are for reference only. Actual pay varies by cruise line, itinerary and position. Always check official sources.</span>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>⚓ Hub · 邮轮新人一站式学习平台</p>
+      <p class="muted">内容为通用行业参考，具体以各船司与海事主管机关最新要求为准。</p>
+    </div>
+  </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="assets/assistant.js?v=20261125e"></script>
+  <script src="assets/app.js?v=20261125e"></script>
+  <script src="assets/tools.js?v=20261125e"></script>
+</body>
+</html>
